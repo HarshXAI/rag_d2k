@@ -26,7 +26,7 @@ os.environ["GOOGLE_API_KEY"] = GEMINI_API_KEY  # Set environment variable for la
 
 # Configure page
 st.set_page_config(
-    page_title="Financial Document Chatbot",
+    page_title="Financial Analytics Workbench",
     page_icon="📊",
     layout="wide"
 )
