@@ -13,7 +13,13 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.prompts import ChatPromptTemplate
 from enhanced_financial_data_extractor import extract_financial_data_rag
+# At the top of your Streamlit app
+import os
+import pytesseract
 
+# Set Tesseract path for Streamlit Cloud
+if os.path.exists('/usr/bin/tesseract'):
+    pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 # Configure Gemini API
 GEMINI_API_KEY = "AIzaSyDtQ049lTGHZZoBkBV2wJIJmvTYgQYN0Og"
 os.environ["GOOGLE_API_KEY"] = GEMINI_API_KEY  # Set environment variable for langchain
